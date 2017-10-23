@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NetService.Model;
 
-namespace littlemm.teach.Base
+using ServiceCore.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace ServiceCore.Base
 {
     class GetInfo
     {
@@ -19,10 +21,10 @@ namespace littlemm.teach.Base
         public GetInfo()
         {
             N_Classes = new List<APP_Class>();
-            //using (var db = new ClassDb())
-            //{
-            //    stu = db.Students.Include(stud => stud.Classes).First();
-            //}
+            using (var db = new DB())
+            {
+               stu = db.Students.Include(stud => stud.Classes).First();
+            }
 
             //Classes = stu.Classes;
         }

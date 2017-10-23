@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace littlemm.teach.Base
+namespace ServiceCore.Base
 {
     public struct Section
     {

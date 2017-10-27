@@ -16,17 +16,17 @@ namespace ServiceCore.Base
 
         List<DATA_Class> Classes;
 
-        public List<APP_Class> N_Classes;
+        public List<APP_Class> APP_Classes;
 
         public GetInfo()
         {
-            N_Classes = new List<APP_Class>();
+            APP_Classes = new List<APP_Class>();
             using (var db = new DB())
             {
                stu = db.Students.Include(stud => stud.Classes).First();
             }
 
-            //Classes = stu.Classes;
+            Classes = stu.Classes;
         }
 
         public void Analysis()
@@ -47,7 +47,7 @@ namespace ServiceCore.Base
                     info = cl[x].ClassInfo.ToCharArray();
                 else
                 {
-                    N_Classes.Add(n_cl);
+                    APP_Classes.Add(n_cl);
                     continue;
                 }
 
@@ -98,7 +98,7 @@ namespace ServiceCore.Base
                     k1 = k2 + 1;
                 }
 
-                N_Classes.Add(n_cl);
+                APP_Classes.Add(n_cl);
             }
 
             //App.stu.Id = stu.Id;

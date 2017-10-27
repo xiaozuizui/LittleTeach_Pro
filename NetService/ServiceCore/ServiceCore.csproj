@@ -120,6 +120,7 @@
     <Compile Include="Base\Student.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Model\DB.cs" />
+    <Compile Include="Net\TeachNet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

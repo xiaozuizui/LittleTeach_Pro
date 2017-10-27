@@ -18,6 +18,11 @@ namespace ServiceCore.Base
 
     public class DATA_Student
     {
+        public DATA_Student(string name,string id)
+        {
+            Name = name;
+            Id = id;
+        }
         public string Name { get; set; }
 
         public string Id { get; set; }

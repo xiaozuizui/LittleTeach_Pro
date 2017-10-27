@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\GetInfo.cs" />
+    <Compile Include="Base\SaveToDataBase.cs" />
     <Compile Include="Base\Student.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Model\DB.cs" />

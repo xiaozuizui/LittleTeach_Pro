@@ -21,7 +21,7 @@ namespace ServiceCore.Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=teachSYS.db");
+            optionsBuilder.UseSqlite("filename=teachSYS.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ServiceCore.Net;
 using System.Threading;
+using ServiceCore.Base;
 
 namespace test
 {
@@ -18,7 +19,7 @@ namespace test
 
 
             Test();
-            Thread.Sleep(3000);
+            Thread.Sleep(6000);
 
 
         }
@@ -27,6 +28,8 @@ namespace test
             tn.Initialize();
             
             test =  await tn.ConnectAsync();
+            SaveToDataBase sv = new SaveToDataBase(test);
+            sv.SaveTodb();
            
         }
 

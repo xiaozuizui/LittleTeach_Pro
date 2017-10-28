@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ServiceCore.Base
 {
-    class GetInfo
+    public class GetInfo
     {
         //public Student student;
         DATA_Student stu;

@@ -23,6 +23,7 @@ namespace ServiceCore.Base
             APP_Classes = new List<APP_Class>();
             using (var db = new DB())
             {
+                //stu = db.Students.First();
                stu = db.Students.Include(stud => stud.Classes).First();
             }
 

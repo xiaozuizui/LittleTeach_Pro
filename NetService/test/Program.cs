@@ -17,9 +17,10 @@ namespace test
         {
             tn = new TeachNet("201585081", "19970401");
 
-
-            Test();
-            Thread.Sleep(6000);
+            GetInfo gt = new GetInfo();
+            gt.Analysis();
+            //Test();
+            //Thread.Sleep(6000);
 
 
         }

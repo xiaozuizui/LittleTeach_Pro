@@ -126,6 +126,11 @@
     <Compile Include="Base\SaveToDataBase.cs" />
     <Compile Include="Base\Student.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\20171028164919_stuDB.cs" />
+    <Compile Include="Migrations\20171028164919_stuDB.designer.cs">
+      <DependentUpon>20171028164919_stuDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBModelSnapshot.cs" />
     <Compile Include="Model\DB.cs" />
     <Compile Include="Net\TeachNet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

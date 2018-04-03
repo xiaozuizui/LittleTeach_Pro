@@ -28,11 +28,11 @@ namespace ServiceCore.Base
             Stu = new DATA_Student(GetName(), GetId());
             Stu.Classes = new List<DATA_Class>();
 
-            using (var db = new DB())
-            {
-                db.Students.Add(Stu);
-                db.SaveChanges();
-            }
+            //using (var db = new DB())
+            //{
+            //    db.Students.Add(Stu);
+            //    db.SaveChanges();
+            //}
            
         }
 
@@ -122,13 +122,15 @@ namespace ServiceCore.Base
             }
             c.section = section;
             c.ClassInfo = Info;
-            using (var db = new DB())
-            {
-                var stu = db.Students.First();
-                stu.Classes = new List<DATA_Class>();
-                stu.Classes.Add(c);
-                db.SaveChanges();
-            }
+
+            Stu.Classes.Add(c);
+            //using (var db = new DB())
+            //{
+            //    var stu = db.Students.First();
+            //    stu.Classes = new List<DATA_Class>();
+            //    stu.Classes.Add(c);
+            //    db.SaveChanges();
+            //}
 
             return j;
         }
